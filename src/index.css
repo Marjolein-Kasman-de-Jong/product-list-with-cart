@@ -9,3 +9,144 @@
 button {
   font-family: inherit;
 }
+
+/* Colors */
+
+:root {
+  --red: rgb(199, 59, 15);
+  --rose-900: rgb(38, 15, 8);
+  --rose-500: rgb(135, 99, 90);
+  --rose-400: rgb(173, 138, 133);
+  --rose-300: rgb(202, 175, 167);
+  --rose-100: rgb(245, 238, 236);
+  --rose-50: rgb(252, 248, 246);
+  --green: rgb(30, 165, 117);
+  --black: rgb(0, 0, 0);
+  --white: rgb(255, 255, 255);
+}
+
+/* Typography */
+
+html {
+  font-family: 'Red Hat Text', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+}
+
+/* --Headings */
+
+.heading-1 {
+  /* ----Page title, order confirmation modal title */
+  color: var(--rose-900);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.heading-2 {
+  /* ----Shopping cart title */
+  color: var(--red);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.heading-3 {
+  /* ----Product title (product card) */
+  color: var(--rose-900);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.heading-4 {
+  /* ----Product title (shopping cart) */
+  color: var(--rose-900);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* --Paragraphs */
+
+[class^="paragraph"] {
+  line-height: normal;
+}
+
+.paragraph-1 {
+  /* ----Product category, single product price (shopping cart), single product price (order confirmation modal) */
+  color: var(--rose-500);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.paragraph-2 {
+  /* ----Single product price (product card) */
+  color: var(--red);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.paragraph-3 {
+  /* ----Combined product price (shopping cart) */
+  color: var(--rose-500);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.paragraph-4 {
+  /* ----Combined product price (order confirmation modal) */
+  color: var(--color-rose-900);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.paragraph-5 {
+  /* ----Order amount */
+  color: var(--red);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.paragraph-6 {
+  /* ----Order total (text) */
+  color: var(--rose-900);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.paragraph-7 {
+  /* ----Order total (number) */
+  color: var(--rose-900);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.paragraph-8 {
+  /* ----Usp */
+  color: var(--rose-900);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.paragraph-9 {
+  /* ----Usp (emphasized) */
+  color: var(--rose-900);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.paragraph-10 {
+  /* ----Regular paragraph (order confirmation modal) */
+  color: var(--rose-500);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.paragraph-11 {
+  /* Regular paragraph (shopping cart) */
+  color: var(--rose-500);
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
