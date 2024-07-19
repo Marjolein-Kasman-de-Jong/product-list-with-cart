@@ -161,8 +161,7 @@ html {
   line-height: normal;
 }
 
-/* Moet button-2 geen aparte class zijn, maar een pseudo-class? */
-.button-2 {
+.button-1.selected {
   /* ----Add to cart (active) */
   color: var(--white);
   font-size: 0.875rem;
@@ -170,7 +169,7 @@ html {
   line-height: normal;
 }
 
-.button-3 {
+.button-2 {
   /* ----Confirm order, start new order */
   color: var(--white);
   font-size: 1rem;

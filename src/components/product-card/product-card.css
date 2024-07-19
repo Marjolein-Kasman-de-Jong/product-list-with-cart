@@ -24,13 +24,32 @@
 .product-card header {
     display: flex;
     flex-direction: column;
-    gap: 16px; /* Controleren of dit nog klopt als button eenmaal is toegevoegd */
+    gap: 38px;
 }
+
+/* Image wrapper */
+
+.product-card .image-wrapper {
+    position: relative;
+}
+
+/* Image */
 
 .product-card img {
     width: 100%;
     border-radius: 8px;
+    display: block;
 }
+
+/* Button */
+
+.product-card .add-to-cart-button {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Hgroup */
 
 .product-card hgroup {
     display: flex;
