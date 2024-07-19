@@ -13,13 +13,13 @@ export default function Button({ buttonIsSelected, toggleButtonIsSelected, handl
         if (change === -1 && shoppingCartItems[item] === 0) {
             toggleButtonIsSelected(false)
         } else {
-            updateShoppingCart(item, shoppingCartItems[item] + change);
+            updateShoppingCart(item, shoppingCartItems[item] + change)
         }
     }
 
     return (
         <button
-            className={`add-to-cart-button button-1 ${buttonIsSelected ? 'selected' : ''}`}
+            className={`add-to-cart-button button-1 ${buttonIsSelected ? 'selected' : 'not-selected'}`}
             onClick={handleButtonClick}
         >
             {
@@ -36,7 +36,7 @@ export default function Button({ buttonIsSelected, toggleButtonIsSelected, handl
                     :
                     <div className='button-content-not-selected'>
                         <img className='shopping-cart-icon' src='src\assets\images\icon-add-to-cart.svg' alt='Shopping cart' />
-                        Add to cart
+                        <p>Add to cart</p>
                     </div>
             }
         </button>

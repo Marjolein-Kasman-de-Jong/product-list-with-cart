@@ -155,18 +155,20 @@ html {
 
 .button-1 {
   /* ----Add to cart (regular) */
-  color: var(--rose-900);
   font-size: 0.875rem;
   font-weight: 600;
   line-height: normal;
 }
 
+.button-1.not-selected {
+  /* ----Add to cart (not selected) */
+  color: var(--rose-900);
+  transition: color .5s;
+}
+
 .button-1.selected {
-  /* ----Add to cart (active) */
+  /* ----Add to cart (selected) */
   color: var(--white);
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: normal;
 }
 
 .button-2 {

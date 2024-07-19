@@ -2,7 +2,7 @@ button:hover {
     cursor: pointer;
 }
 
-/* Add to cart button (not selected) */
+/* Add to cart button */
 
 .add-to-cart-button {
     width: 160px;
@@ -13,6 +13,22 @@ button:hover {
     border: 1px solid var(--rose-400);
     border-radius: 999px;
     background-color: var(--white);
+    transition: background-color .5s;
+}
+
+/* Add to cart button (not selected) */
+
+.add-to-cart-button.not-selected {
+    animation: border-visibility .5s;
+}
+
+@keyframes border-visibility {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .button-content-not-selected {
@@ -24,6 +40,16 @@ button:hover {
 
 .button-content-not-selected .shopping-cart-icon {
     width: 20px;
+    animation: icon-visibility .5s;
+}
+
+@keyframes icon-visibility {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* Add to cart button (selected) */
@@ -46,7 +72,7 @@ button:hover {
     padding: 4px;
     border: 1px solid var(--white);
     border-radius: 50%;
-    background-color: var(--red);
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;

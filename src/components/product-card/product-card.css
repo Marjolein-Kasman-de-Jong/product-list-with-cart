@@ -41,6 +41,14 @@
     display: block;
 }
 
+.product-card .product-image {
+    transition: transform .3s;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05); /* Checken of dit er ook goed uitziet op mobile en tablet */
+}
+
 /* Button */
 
 .product-card .add-to-cart-button {
