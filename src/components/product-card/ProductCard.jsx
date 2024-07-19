@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 
 // Components
 import Button from '../button/Button'
@@ -29,9 +29,9 @@ export default function ProductCard({ product }) {
                     <picture>
                         <source media='(min-width: 1440px )' srcSet={`src/${image.desktop}`} />
                         <source media='(min-width: 768px)' srcSet={`src/${image.tablet}`} />
-                        <img src={`src/${image.mobile}`} alt={`src/${image.name}`} />
+                        <img src={`src/${image.mobile}`} alt={name} />
                     </picture>
-                    <Button buttonIsSelected={buttonIsSelected} handleButtonClick={handleButtonClick} />
+                    <Button buttonIsSelected={buttonIsSelected} toggleButtonIsSelected={toggleButtonIsSelected} handleButtonClick={handleButtonClick} item={name} />
                 </div>
                 <hgroup>
                     <p className='paragraph-1'>{category}</p>
