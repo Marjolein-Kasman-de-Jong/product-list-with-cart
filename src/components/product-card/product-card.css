@@ -1,0 +1,39 @@
+/* Product card */
+
+.product-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+@media screen and (min-width: 768px) {
+    .product-card {
+        max-width: 213px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .product-card {
+        max-width: 251px;
+    }
+}
+
+/* Header */
+
+.product-card header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Controleren of dit nog klopt als button eenmaal is toegevoegd */
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.product-card hgroup {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
