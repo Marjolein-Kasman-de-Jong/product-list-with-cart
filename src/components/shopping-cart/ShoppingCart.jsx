@@ -4,26 +4,28 @@ import { useState, useEffect, useContext } from 'react'
 import { ShoppingCartContext } from '../../context/ShoppingCartContext'
 
 // Components
-import ShoppingCartItem from '../shopping-cart-item/ShoppingCartItem'
+import ShoppingCartHeader from '../shopping-cart-header/ShoppingCartHeader'
+import ShoppingCartIsEmptyMessage from '../shopping-cart-is-empty-message/ShoppingCartIsEmptyMessage'
+import ShoppingCartItemsContainer from '../shopping-cart-items-container/ShoppingCartItemsContainer'
+import ShoppingCartOrderTotal from '../shopping-cart-order-total/ShoppingCartOrderTotal'
 
 // Helpers
 import checkIfShoppingCartIsEmpty from '../../helpers/checkIfShoppingCartIsEmpty'
 import findProductsToShow from '../../helpers/findProductsToShow'
-import convertToCurrency from '../../helpers/convertToCurrency'
 
 // Styles
 import './shopping-cart.css'
 
 export default function ShoppingCart() {
   // Context
-  const { 
-    shoppingCartItems, 
-    singleItemPrices, 
-    totalItemPrices, 
-    amountOfItemsInShoppingCart, 
-    totalOrderPrice 
+  const {
+    shoppingCartItems,
+    singleItemPrices,
+    totalItemPrices,
+    amountOfItemsInShoppingCart,
+    totalOrderPrice
   } = useContext(ShoppingCartContext)
-  
+
   // State
   const [isShoppingCartEmpty, setIsShoppingCartEmpty] = useState(true)
   const [productsToShow, setProductsToShow] = useState([])
@@ -33,33 +35,17 @@ export default function ShoppingCart() {
     setProductsToShow(findProductsToShow(shoppingCartItems))
   }, [shoppingCartItems])
 
-
   return (
     <section className='shopping-cart'>
-      <header>
-        <h2 className='heading-2'>Your Cart ({amountOfItemsInShoppingCart})</h2>
-      </header>
-      <div className="ordered-items-container">
-        {
-          isShoppingCartEmpty ?
-            <article className='cart-is-empty-message paragraph-11'>
-              <img src="src\assets\images\illustration-empty-cart.svg" alt="Cake" />
-              <p>Your added items will appear here</p>
-            </article>
-            :
-            productsToShow.map((product) => {
-              return <ShoppingCartItem key={product[0]} item={product[0]} amount={product[1]} singleItemPrice={singleItemPrices[product[0]]} totalItemPrice={totalItemPrices[product[0]]} />
-            })
-        }
-      </div>
+      <ShoppingCartHeader amountOfItemsInShoppingCart={amountOfItemsInShoppingCart} />
       {
         isShoppingCartEmpty ?
-          null
+          <ShoppingCartIsEmptyMessage />
           :
-          <footer className="order-total-container">
-            <p className='paragraph-6'>Order Total</p>
-            <p className='paragraph-7'>{convertToCurrency(totalOrderPrice)}</p>
-          </footer>
+          <>
+            <ShoppingCartItemsContainer productsToShow={productsToShow} singleItemPrices={singleItemPrices} totalItemPrices={totalItemPrices} />
+            <ShoppingCartOrderTotal totalOrderPrice={totalOrderPrice}/>
+          </>
       }
     </section>
   )
