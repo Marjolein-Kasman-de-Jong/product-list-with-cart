@@ -9,6 +9,7 @@ import ShoppingCartIsEmptyMessage from '../shopping-cart-is-empty-message/Shoppi
 import ShoppingCartItemsContainer from '../shopping-cart-items-container/ShoppingCartItemsContainer'
 import ShoppingCartOrderTotal from '../shopping-cart-order-total/ShoppingCartOrderTotal'
 import Usp from '../usp/Usp'
+import ConfirmOrderButton from '../confirm-order-button/ConfirmOrderButton'
 
 // Helpers
 import checkIfShoppingCartIsEmpty from '../../helpers/checkIfShoppingCartIsEmpty'
@@ -47,6 +48,7 @@ export default function ShoppingCart() {
             <ShoppingCartItemsContainer productsToShow={productsToShow} singleItemPrices={singleItemPrices} totalItemPrices={totalItemPrices} />
             <ShoppingCartOrderTotal totalOrderPrice={totalOrderPrice} />
             <Usp />
+            <ConfirmOrderButton />
           </>
       }
     </section>

@@ -25,6 +25,12 @@ button {
   --white: rgb(255, 255, 255);
 }
 
+/* Background */
+
+:root {
+  background-color: var(--rose-50);
+}
+
 /* Typography */
 
 html {
