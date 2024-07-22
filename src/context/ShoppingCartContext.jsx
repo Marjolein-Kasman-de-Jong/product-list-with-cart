@@ -9,6 +9,7 @@ const ShoppingCartProvider = ({ children }) => {
     const [shoppingCartItems, setShoppingCartItems] = useState({})
     const [singleItemPrices, setSingleItemPrices] = useState({})
     const [totalItemPrices, setTotalItemPrices] = useState({})
+    const [totalOrderPrice, setTotalOrderPrice] = useState(0)
 
     // Initialize shoppingCartItems
     useEffect(() => {
@@ -49,8 +50,15 @@ const ShoppingCartProvider = ({ children }) => {
         })
     }, [shoppingCartItems])
 
+    // Monitor total order price
+    useEffect(() => {
+        setTotalOrderPrice(() => {
+            return Object.values(totalItemPrices).reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+        })
+    }, [totalItemPrices])
+
     return (
-        <ShoppingCartContext.Provider value={{ shoppingCartItems, updateShoppingCart, amountOfItemsInShoppingCart, singleItemPrices, setSingleItemPrices, totalItemPrices, setTotalItemPrices }} >
+        <ShoppingCartContext.Provider value={{ shoppingCartItems, updateShoppingCart, amountOfItemsInShoppingCart, singleItemPrices, setSingleItemPrices, totalItemPrices, setTotalItemPrices, totalOrderPrice }} >
             {children}
         </ShoppingCartContext.Provider>
     )

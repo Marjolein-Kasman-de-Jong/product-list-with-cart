@@ -6,6 +6,9 @@ import { ShoppingCartContext } from '../../context/ShoppingCartContext'
 // Components
 import ShoppingCartItem from '../shopping-cart-item/ShoppingCartItem'
 
+// Helpers
+import convertToCurrency from '../../helpers/convertToCurrency'
+
 // Styles
 import './shopping-cart.css'
 
@@ -13,7 +16,8 @@ export default function ShoppingCart() {
   const { shoppingCartItems, updateShoppingCart } = useContext(ShoppingCartContext)
   const { singleItemPrices, setSingleItemPrices } = useContext(ShoppingCartContext)
   const { totalItemPrices, setTotalItemPrices } = useContext(ShoppingCartContext)
-  const { amountOfItemsInShoppingCart} = useContext(ShoppingCartContext)
+  const { amountOfItemsInShoppingCart } = useContext(ShoppingCartContext)
+  const { totalOrderPrice } = useContext(ShoppingCartContext)
   const [isShoppingCartEmpty, setIsShoppingCartEmpty] = useState(true)
   const [productsToShow, setProductsToShow] = useState([])
 
@@ -51,6 +55,16 @@ export default function ShoppingCart() {
             })
         }
       </div>
+      {
+        isShoppingCartEmpty ?
+          null
+          :
+          <footer className="order-total-container">
+            <p className='paragraph-6'>Order Total</p>
+            <p className='paragraph-7'>{convertToCurrency(totalOrderPrice)}</p>
+          </footer>
+      }
+
     </section>
   )
 }
