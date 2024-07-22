@@ -6,10 +6,7 @@ import { ShoppingCartContext } from '../../context/ShoppingCartContext'
 // Components
 import ShoppingCartHeader from '../shopping-cart-header/ShoppingCartHeader'
 import ShoppingCartIsEmptyMessage from '../shopping-cart-is-empty-message/ShoppingCartIsEmptyMessage'
-import ShoppingCartItemsContainer from '../shopping-cart-items-container/ShoppingCartItemsContainer'
-import ShoppingCartOrderTotal from '../shopping-cart-order-total/ShoppingCartOrderTotal'
-import Usp from '../usp/Usp'
-import ConfirmOrderButton from '../confirm-order-button/ConfirmOrderButton'
+import ShoppingCartContent from '../shopping-cart-content/ShoppingCartContent'
 
 // Helpers
 import checkIfShoppingCartIsEmpty from '../../helpers/checkIfShoppingCartIsEmpty'
@@ -22,10 +19,6 @@ export default function ShoppingCart() {
   // Context
   const {
     shoppingCartItems,
-    singleItemPrices,
-    totalItemPrices,
-    amountOfItemsInShoppingCart,
-    totalOrderPrice
   } = useContext(ShoppingCartContext)
 
   // State
@@ -39,17 +32,14 @@ export default function ShoppingCart() {
 
   return (
     <section className='shopping-cart'>
-      <ShoppingCartHeader amountOfItemsInShoppingCart={amountOfItemsInShoppingCart} />
+      <ShoppingCartHeader />
       {
         isShoppingCartEmpty ?
           <ShoppingCartIsEmptyMessage />
           :
-          <>
-            <ShoppingCartItemsContainer productsToShow={productsToShow} singleItemPrices={singleItemPrices} totalItemPrices={totalItemPrices} />
-            <ShoppingCartOrderTotal totalOrderPrice={totalOrderPrice} />
-            <Usp />
-            <ConfirmOrderButton />
-          </>
+          <ShoppingCartContent 
+            productsToShow={productsToShow} 
+          />
       }
     </section>
   )

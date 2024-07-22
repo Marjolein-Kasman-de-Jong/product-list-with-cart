@@ -6,6 +6,7 @@ import RemoveItemButton from '../remove-item-button/RemoveItemButton'
 import './shopping-cart-item.css'
 
 export default function ShoppingCartItem({ item, amount, singleItemPrice, totalItemPrice }) {
+
     return (
         <article className='shopping-cart-item'>
             <ShoppingCartItemSummary 
