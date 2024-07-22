@@ -1,23 +1,7 @@
 .shopping-cart-item {
-    padding-top: 16px;
-    padding-bottom: 24px;
+    padding: 16px 0 24px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--rose-100);
-}
-
-/* Item summary */
-
-.item-summary {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-/* Item summary - Price calculation */
-
-.calculation {
-    display: flex;
-    gap: 8px;
 }
