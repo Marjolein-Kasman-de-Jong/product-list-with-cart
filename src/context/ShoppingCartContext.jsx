@@ -7,6 +7,7 @@ export const ShoppingCartContext = createContext()
 
 const ShoppingCartProvider = ({ children }) => {
     const [shoppingCartItems, setShoppingCartItems] = useState({})
+    const [amountOfItemsInShoppingCart, setAmountOfItemsInShoppingCart] = useState(0)
     const [singleItemPrices, setSingleItemPrices] = useState({})
     const [totalItemPrices, setTotalItemPrices] = useState({})
     const [totalOrderPrice, setTotalOrderPrice] = useState(0)
@@ -27,10 +28,12 @@ const ShoppingCartProvider = ({ children }) => {
         })
     }
 
-    // Count amount of items in shoppingCart
-    const amountOfItemsInShoppingCart = () => {
-        return Object.values(shoppingCartItems).reduce((accumulator, currentValue) => accumulator + currentValue, 0)
-    }
+    // Monitor amount of items in shopping cart
+    useEffect(() => {
+        setAmountOfItemsInShoppingCart((prevItems) => {
+            return Object.values(shoppingCartItems).reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+        })
+    }, [shoppingCartItems])
 
     // Initialize singleItemPrices
     useEffect(() => {

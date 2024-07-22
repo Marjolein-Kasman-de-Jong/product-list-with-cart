@@ -15,7 +15,16 @@ import convertToCurrency from '../../helpers/convertToCurrency'
 import './shopping-cart.css'
 
 export default function ShoppingCart() {
-  const { shoppingCartItems, singleItemPrices, totalItemPrices, amountOfItemsInShoppingCart, totalOrderPrice } = useContext(ShoppingCartContext)
+  // Context
+  const { 
+    shoppingCartItems, 
+    singleItemPrices, 
+    totalItemPrices, 
+    amountOfItemsInShoppingCart, 
+    totalOrderPrice 
+  } = useContext(ShoppingCartContext)
+  
+  // State
   const [isShoppingCartEmpty, setIsShoppingCartEmpty] = useState(true)
   const [productsToShow, setProductsToShow] = useState([])
 
@@ -28,7 +37,7 @@ export default function ShoppingCart() {
   return (
     <section className='shopping-cart'>
       <header>
-        <h2 className='heading-2'>Your Cart ({amountOfItemsInShoppingCart()})</h2>
+        <h2 className='heading-2'>Your Cart ({amountOfItemsInShoppingCart})</h2>
       </header>
       <div className="ordered-items-container">
         {
