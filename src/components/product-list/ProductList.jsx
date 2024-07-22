@@ -10,9 +10,11 @@ import './product-list.css'
 export default function ProductList() {
   return (
     <section className='product-list'>
-      <h1 className='heading-1'>
-        Desserts
-      </h1>
+      <header>
+        <h1 className='heading-1'>
+          Desserts
+        </h1>
+      </header>
       <div className='product-card-container'>
         {
           data.map((product) => {

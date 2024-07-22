@@ -4,9 +4,9 @@ import { useContext } from 'react'
 import { ShoppingCartContext } from '../../context/ShoppingCartContext'
 
 // Styles
-import './button.css'
+import './add-to-cart-button.css'
 
-export default function Button({ buttonIsSelected, toggleButtonIsSelected, handleButtonClick, item }) {
+export default function AddToCartButton({ buttonIsSelected, toggleButtonIsSelected, handleButtonClick, item }) {
     const { shoppingCartItems, updateShoppingCart } = useContext(ShoppingCartContext)
 
     function changeQuantity(item, change) {

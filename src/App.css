@@ -1,6 +1,11 @@
 .page-wrapper {
     width: 87.2%;
+    max-width: 1500px;
     margin: 24px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 32px;
 }
 
 @media screen and (min-width: 768px) {
@@ -14,5 +19,6 @@
     .page-wrapper {
         width: 84.4%;
         margin: 88px auto;
+        justify-content: space-between;
     }
 }

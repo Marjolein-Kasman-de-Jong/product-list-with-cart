@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 // Components
-import Button from '../button/Button'
+import AddToCartButton from '../add-to-cart-button/AddToCartButton'
 
 // Helpers
 import convertToCurrency from '../../helpers/convertToCurrency'
@@ -31,7 +31,7 @@ export default function ProductCard({ product }) {
                         <source media='(min-width: 768px)' srcSet={`src/${image.tablet}`} />
                         <img className='product-image' src={`src/${image.mobile}`} alt={name} />
                     </picture>
-                    <Button buttonIsSelected={buttonIsSelected} toggleButtonIsSelected={toggleButtonIsSelected} handleButtonClick={handleButtonClick} item={name} />
+                    <AddToCartButton buttonIsSelected={buttonIsSelected} toggleButtonIsSelected={toggleButtonIsSelected} handleButtonClick={handleButtonClick} item={name} />
                 </div>
                 <hgroup>
                     <p className='paragraph-1'>{category}</p>
