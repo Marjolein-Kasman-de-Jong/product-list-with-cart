@@ -7,35 +7,23 @@ import { ShoppingCartContext } from '../../context/ShoppingCartContext'
 import ShoppingCartItem from '../shopping-cart-item/ShoppingCartItem'
 
 // Helpers
+import checkIfShoppingCartIsEmpty from '../../helpers/checkIfShoppingCartIsEmpty'
+import findProductsToShow from '../../helpers/findProductsToShow'
 import convertToCurrency from '../../helpers/convertToCurrency'
 
 // Styles
 import './shopping-cart.css'
 
 export default function ShoppingCart() {
-  const { shoppingCartItems, updateShoppingCart } = useContext(ShoppingCartContext)
-  const { singleItemPrices, setSingleItemPrices } = useContext(ShoppingCartContext)
-  const { totalItemPrices, setTotalItemPrices } = useContext(ShoppingCartContext)
-  const { amountOfItemsInShoppingCart } = useContext(ShoppingCartContext)
-  const { totalOrderPrice } = useContext(ShoppingCartContext)
+  const { shoppingCartItems, singleItemPrices, totalItemPrices, amountOfItemsInShoppingCart, totalOrderPrice } = useContext(ShoppingCartContext)
   const [isShoppingCartEmpty, setIsShoppingCartEmpty] = useState(true)
   const [productsToShow, setProductsToShow] = useState([])
 
   useEffect(() => {
-    const checkIfShoppingCartIsEmpty = () => {
-      return Object.values(shoppingCartItems).every(value => value === 0)
-    }
-
-    setIsShoppingCartEmpty(checkIfShoppingCartIsEmpty())
+    setIsShoppingCartEmpty(checkIfShoppingCartIsEmpty(shoppingCartItems))
+    setProductsToShow(findProductsToShow(shoppingCartItems))
   }, [shoppingCartItems])
 
-  useEffect(() => {
-    const findProductsToShow = () => {
-      return Object.entries(shoppingCartItems).filter(([key, value]) => value != 0)
-    }
-
-    setProductsToShow(findProductsToShow())
-  }, [shoppingCartItems])
 
   return (
     <section className='shopping-cart'>
@@ -64,7 +52,6 @@ export default function ShoppingCart() {
             <p className='paragraph-7'>{convertToCurrency(totalOrderPrice)}</p>
           </footer>
       }
-
     </section>
   )
 }
