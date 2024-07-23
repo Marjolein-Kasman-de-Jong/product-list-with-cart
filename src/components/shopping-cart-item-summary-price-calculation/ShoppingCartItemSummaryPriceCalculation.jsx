@@ -1,7 +1,5 @@
-// Helpers
 import convertToCurrency from '../../helpers/convertToCurrency'
 
-// Styles
 import './shopping-cart-item-summary-price-calculation.css'
 
 export default function ShoppingCartItemSummaryPriceCalculation({ amount, singleItemPrice, totalItemPrice }) {

@@ -1,4 +1,3 @@
-// Styles
 import './usp.css'
 
 export default function Usp() {

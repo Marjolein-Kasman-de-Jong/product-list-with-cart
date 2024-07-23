@@ -1,10 +1,14 @@
-// Helpers
+import { useContext } from 'react'
+
+import { ShoppingCartContext } from '../../context/ShoppingCartContext'
+
 import convertToCurrency from '../../helpers/convertToCurrency'
 
-// Styles
 import './shopping-cart-order-total.css'
 
-export default function ShoppingCartOrderTotal({ totalOrderPrice }) {
+export default function ShoppingCartOrderTotal() {
+    const { totalOrderPrice } = useContext(ShoppingCartContext)
+
     return (
         <div className="shopping-cart-order-total">
             <p className='paragraph-6'>

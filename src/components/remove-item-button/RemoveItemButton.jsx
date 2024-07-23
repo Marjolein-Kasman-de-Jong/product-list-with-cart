@@ -1,22 +1,16 @@
 import { useContext } from 'react'
 
-// Context
 import { ShoppingCartContext } from '../../context/ShoppingCartContext'
 
-// Styles
 import './remove-item-button.css'
 
 export default function RemoveItemButton({ item }) {
     const { updateShoppingCart } = useContext(ShoppingCartContext)
 
-    const handleClick = () => {
-        updateShoppingCart(item, 0)
-    }
-
     return (
         <button 
             className='remove-item-button' 
-            onClick={handleClick}
+            onClick={() => {updateShoppingCart(item, 0)}}
         >
             <svg 
                 xmlns="http://www.w3.org/2000/svg" 

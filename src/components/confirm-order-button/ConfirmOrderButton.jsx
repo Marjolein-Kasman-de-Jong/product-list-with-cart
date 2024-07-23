@@ -1,4 +1,3 @@
-// Styles
 import './confirm-order-button.css'
 
 export default function ConfirmOrderButton() {
