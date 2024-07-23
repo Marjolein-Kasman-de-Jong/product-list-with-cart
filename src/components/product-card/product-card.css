@@ -29,38 +29,6 @@
 
 /* Image wrapper */
 
-.product-card .image-wrapper {
+.product-card header .image-wrapper {
     position: relative;
-}
-
-/* Image */
-
-.product-card img {
-    width: 100%;
-    border-radius: 8px;
-    display: block;
-}
-
-.product-card .product-image {
-    transition: transform .3s;
-}
-
-.product-card:hover .product-image {
-    transform: scale(1.05); /* Checken of dit er ook goed uitziet op mobile en tablet */
-}
-
-/* Button */
-
-.product-card .add-to-cart-button {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* Hgroup */
-
-.product-card hgroup {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
 }

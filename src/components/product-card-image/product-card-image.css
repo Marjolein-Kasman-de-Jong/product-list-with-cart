@@ -1,0 +1,13 @@
+.product-card .product-image {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+.product-card .product-image {
+    transition: transform .3s;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}

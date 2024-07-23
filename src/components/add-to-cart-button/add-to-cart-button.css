@@ -7,6 +7,9 @@ button:hover {
 .add-to-cart-button {
     width: 160px;
     height: 44px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
