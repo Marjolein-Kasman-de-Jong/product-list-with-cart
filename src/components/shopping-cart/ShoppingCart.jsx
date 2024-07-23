@@ -17,17 +17,15 @@ import './shopping-cart.css'
 
 export default function ShoppingCart() {
   // Context
-  const {
-    shoppingCartItems,
-  } = useContext(ShoppingCartContext)
+  const { shoppingCartItems } = useContext(ShoppingCartContext)
 
   // State
   const [isShoppingCartEmpty, setIsShoppingCartEmpty] = useState(true)
-  const [productsToShow, setProductsToShow] = useState([])
+  // const [productsToShow, setProductsToShow] = useState([])
 
   useEffect(() => {
     setIsShoppingCartEmpty(checkIfShoppingCartIsEmpty(shoppingCartItems))
-    setProductsToShow(findProductsToShow(shoppingCartItems))
+    // setProductsToShow(findProductsToShow(shoppingCartItems))
   }, [shoppingCartItems])
 
   return (
@@ -37,9 +35,7 @@ export default function ShoppingCart() {
         isShoppingCartEmpty ?
           <ShoppingCartIsEmptyMessage />
           :
-          <ShoppingCartContent 
-            productsToShow={productsToShow} 
-          />
+          <ShoppingCartContent />
       }
     </section>
   )

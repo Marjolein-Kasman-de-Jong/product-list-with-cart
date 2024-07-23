@@ -12,12 +12,12 @@ import ConfirmOrderButton from '../confirm-order-button/ConfirmOrderButton'
 // Styles
 import './shopping-cart-content.css'
 
-export default function ShoppingCartContent({ productsToShow }) {
+export default function ShoppingCartContent() {
     const { totalOrderPrice} = useContext(ShoppingCartContext)
 
     return (
         <>
-            <ShoppingCartItemsContainer productsToShow={productsToShow} />
+            <ShoppingCartItemsContainer />
             <ShoppingCartOrderTotal totalOrderPrice={totalOrderPrice} />
             <Usp />
             <ConfirmOrderButton />
