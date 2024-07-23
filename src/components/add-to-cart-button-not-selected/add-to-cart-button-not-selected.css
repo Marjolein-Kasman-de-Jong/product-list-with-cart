@@ -1,0 +1,33 @@
+.add-to-cart-button.not-selected {
+    animation: border-visibility .5s;
+}
+
+@keyframes border-visibility {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.add-to-cart-button-not-selected {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.add-to-cart-button-not-selected .shopping-cart-icon {
+    width: 20px;
+    animation: icon-visibility .5s;
+}
+
+@keyframes icon-visibility {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

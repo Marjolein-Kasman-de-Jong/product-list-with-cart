@@ -1,25 +1,12 @@
-import { useState, useContext } from 'react'
+import { useState } from 'react'
 
-// Context
-import { ShoppingCartContext } from '../../context/ShoppingCartContext'
+import AddToCartButtonSelected from '../add-to-cart-button-selected/AddToCartButtonSelected'
+import AddToCartButtonNotSelected from '../add-to-cart-button-not-selected/AddToCartButtonNotSelected'
 
-// Styles
 import './add-to-cart-button.css'
 
 export default function AddToCartButton({ product }) {
-    const { shoppingCartItems, updateShoppingCart } = useContext(ShoppingCartContext)
-
     const [buttonIsSelected, toggleButtonIsSelected] = useState(false)
-
-    const { name } = product
-
-    function changeQuantity(name, change) {
-        if (change === -1 && shoppingCartItems[name] === 0) {
-            toggleButtonIsSelected(false)
-        } else {
-            updateShoppingCart(name, shoppingCartItems[name] + change)
-        }
-    }
 
     return (
         <button
@@ -28,20 +15,9 @@ export default function AddToCartButton({ product }) {
         >
             {
                 buttonIsSelected ?
-                    <div className='button-content-selected'>
-                        <div className='change-quantity-button' onClick={() => changeQuantity(name, -1)}>
-                            <img src='src\assets\images\icon-decrement-quantity.svg' alt='Decrement' />
-                        </div>
-                        <p>{shoppingCartItems[name] ? shoppingCartItems[name] : '0'}</p>
-                        <div className='change-quantity-button' onClick={() => changeQuantity(name, +1)}>
-                            <img src='src\assets\images\icon-increment-quantity.svg' alt='Increment' />
-                        </div>
-                    </div>
+                    <AddToCartButtonSelected product={product} toggleButtonIsSelected={toggleButtonIsSelected} />
                     :
-                    <div className='button-content-not-selected'>
-                        <img className='shopping-cart-icon' src='src\assets\images\icon-add-to-cart.svg' alt='Shopping cart' />
-                        <p>Add to cart</p>
-                    </div>
+                    <AddToCartButtonNotSelected />
             }
         </button>
     )
