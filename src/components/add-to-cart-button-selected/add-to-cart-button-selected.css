@@ -3,21 +3,9 @@
     background-color: var(--red);
 }
 
-.button-content-selected {
+.add-to-cart-button-selected {
     width: 136px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-}
-
-.button-content-selected .change-quantity-button {
-    width: 20px;
-    height: 20px;
-    padding: 4px;
-    border: 1px solid var(--white);
-    border-radius: 50%;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
     align-items: center;
 }

@@ -1,0 +1,11 @@
+.add-to-cart-button-selected .change-quantity-button {
+    width: 20px;
+    height: 20px;
+    padding: 4px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

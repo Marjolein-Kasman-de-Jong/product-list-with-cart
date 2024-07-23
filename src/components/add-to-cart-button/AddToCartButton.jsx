@@ -10,7 +10,11 @@ export default function AddToCartButton({ product }) {
 
     return (
         <button
-            className={`add-to-cart-button button-1 ${buttonIsSelected ? 'selected' : 'not-selected'}`}
+            className={`
+                add-to-cart-button 
+                button-1 
+                ${buttonIsSelected ? 'selected' : 'not-selected'}
+            `}
             onClick={() => !buttonIsSelected && toggleButtonIsSelected(true)}
         >
             {
