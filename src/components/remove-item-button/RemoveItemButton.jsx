@@ -1,7 +1,5 @@
 import { useContext } from 'react'
-
 import { ShoppingCartContext } from '../../context/ShoppingCartContext'
-
 import './remove-item-button.css'
 
 export default function RemoveItemButton({ item }) {

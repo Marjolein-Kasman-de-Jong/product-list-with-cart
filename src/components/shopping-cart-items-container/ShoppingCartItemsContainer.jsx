@@ -1,26 +1,16 @@
 import { useState, useEffect, useContext } from 'react'
-
-// Context
 import { ShoppingCartContext } from '../../context/ShoppingCartContext'
-
-// Components
 import ShoppingCartItem from '../shopping-cart-item/ShoppingCartItem'
-
-// Helpers
 import findProductsToShow from '../../helpers/findProductsToShow'
-
-// Styles
 import './shopping-cart-items-container.css'
 
 export default function ShoppingCartItemsContainer() {
     const { shoppingCartItems, singleItemPrices, totalItemPrices } = useContext(ShoppingCartContext)
-
     const [productsToShow, setProductsToShow] = useState([])
-    
+
     useEffect(() => {
         setProductsToShow(findProductsToShow(shoppingCartItems))
-      }, [shoppingCartItems])
-
+    }, [shoppingCartItems])
 
     return (
         <div className="shopping-cart-items-container">

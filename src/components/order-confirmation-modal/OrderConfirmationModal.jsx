@@ -1,4 +1,3 @@
-// Styles
 import '/order-confirmation-modal.css'
 
 export default function OrderConfirmationModal() {

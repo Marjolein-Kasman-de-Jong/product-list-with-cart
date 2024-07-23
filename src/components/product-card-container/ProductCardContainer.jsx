@@ -1,7 +1,5 @@
 import ProductCard from '../product-card/ProductCard'
-
 import data from '../../../data.json'
-
 import './product-card-container.css'
 
 export default function ProductCardContainer() {

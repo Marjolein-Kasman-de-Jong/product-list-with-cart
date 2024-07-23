@@ -1,9 +1,6 @@
 import { useContext } from 'react'
-
 import { ShoppingCartContext } from '../../context/ShoppingCartContext'
-
 import ChangeQuantityButton from '../change-quantity-button/ChangeQuantityButton'
-
 import './add-to-cart-button-selected.css'
 
 export default function AddToCartButtonSelected({ product, toggleButtonIsSelected }) {

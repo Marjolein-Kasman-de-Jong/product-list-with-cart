@@ -1,5 +1,4 @@
 import convertToCurrency from '../../helpers/convertToCurrency'
-
 import './product-card-price.css'
 
 export default function ProductCardPrice({ product }) {

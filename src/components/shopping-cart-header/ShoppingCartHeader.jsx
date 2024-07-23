@@ -1,9 +1,5 @@
 import { useContext } from 'react'
-
-// Context
 import { ShoppingCartContext } from '../../context/ShoppingCartContext'
-
-// Styles
 import './shopping-cart-header.css'
 
 export default function ShoppingCartHeader({ }) {

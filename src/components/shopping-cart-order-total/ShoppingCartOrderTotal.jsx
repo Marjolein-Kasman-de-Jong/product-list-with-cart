@@ -1,9 +1,6 @@
 import { useContext } from 'react'
-
 import { ShoppingCartContext } from '../../context/ShoppingCartContext'
-
 import convertToCurrency from '../../helpers/convertToCurrency'
-
 import './shopping-cart-order-total.css'
 
 export default function ShoppingCartOrderTotal() {
