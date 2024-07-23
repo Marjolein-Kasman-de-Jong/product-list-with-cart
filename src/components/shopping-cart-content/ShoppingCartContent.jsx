@@ -4,13 +4,13 @@ import Usp from '../usp/Usp'
 import ConfirmOrderButton from '../confirm-order-button/ConfirmOrderButton'
 import './shopping-cart-content.css'
 
-export default function ShoppingCartContent() {
+export default function ShoppingCartContent({ setIsOpen }) {
     return (
         <>
             <ShoppingCartItemsContainer />
             <ShoppingCartOrderTotal />
             <Usp />
-            <ConfirmOrderButton />
+            <ConfirmOrderButton setIsOpen={setIsOpen} />
         </>
     )
 }
