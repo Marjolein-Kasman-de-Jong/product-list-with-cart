@@ -4,7 +4,7 @@ import ShoppingCartItem from '../shopping-cart-item/ShoppingCartItem'
 import findProductsToShow from '../../helpers/findProductsToShow'
 import './shopping-cart-items-container.css'
 
-export default function ShoppingCartItemsContainer() {
+export default function ShoppingCartItemsContainer({ context }) {
     const { shoppingCartItems, singleItemPrices, totalItemPrices } = useContext(ShoppingCartContext)
     const [productsToShow, setProductsToShow] = useState([])
 
@@ -13,11 +13,12 @@ export default function ShoppingCartItemsContainer() {
     }, [shoppingCartItems])
 
     return (
-        <div className="shopping-cart-items-container">
+        <div className={`${context} shopping-cart-items-container`}>
             {
                 productsToShow.map((product) => {
                     return <ShoppingCartItem
                         key={product[0]}
+                        context={context}
                         item={product[0]}
                         amount={product[1]}
                         singleItemPrice={singleItemPrices[product[0]]}

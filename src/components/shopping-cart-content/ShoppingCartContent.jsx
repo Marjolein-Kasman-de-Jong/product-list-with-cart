@@ -7,7 +7,7 @@ import './shopping-cart-content.css'
 export default function ShoppingCartContent({ setIsOpen }) {
     return (
         <>
-            <ShoppingCartItemsContainer />
+            <ShoppingCartItemsContainer context='shopping-cart' />
             <ShoppingCartOrderTotal />
             <Usp />
             <ConfirmOrderButton setIsOpen={setIsOpen} />
