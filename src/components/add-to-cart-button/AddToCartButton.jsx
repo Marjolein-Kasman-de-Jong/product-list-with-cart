@@ -3,21 +3,28 @@ import AddToCartButtonSelected from '../add-to-cart-button-selected/AddToCartBut
 import AddToCartButtonNotSelected from '../add-to-cart-button-not-selected/AddToCartButtonNotSelected'
 import './add-to-cart-button.css'
 
-export default function AddToCartButton({ product }) {
-    const [buttonIsSelected, toggleButtonIsSelected] = useState(false)
+export default function AddToCartButton({ product, buttonIsSelected, setButtonIsSelected }) {
+    function handleClick() {
+        if (!buttonIsSelected?.[product.name]) {
+            setButtonIsSelected(prevState => ({
+                ...prevState,
+                [product.name]: true
+            }))
+        }
+    }
 
     return (
         <button
             className={`
                 add-to-cart-button 
                 button-1 
-                ${buttonIsSelected ? 'selected' : 'not-selected'}
+                ${buttonIsSelected?.[product.name] === true ? 'selected' : 'not-selected'}
             `}
-            onClick={() => !buttonIsSelected && toggleButtonIsSelected(true)}
+            onClick={handleClick}
         >
             {
-                buttonIsSelected ?
-                    <AddToCartButtonSelected product={product} toggleButtonIsSelected={toggleButtonIsSelected} />
+                buttonIsSelected?.[product.name] === true ?
+                    <AddToCartButtonSelected product={product} buttonIsSelected={buttonIsSelected} setButtonIsSelected={setButtonIsSelected} />
                     :
                     <AddToCartButtonNotSelected />
             }
