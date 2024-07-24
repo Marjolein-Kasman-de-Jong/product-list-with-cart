@@ -12,11 +12,6 @@
     border-radius: 12px;
 }
 
-.order-confirmation-modal::-webkit-scrollbar {
-    display: none;
-  }
-
-
 @media screen and (min-width: 768px) {
     .order-confirmation-modal {
         width: 89.6%;
@@ -28,6 +23,10 @@
     .order-confirmation-modal {
         width: 41.1%
     }
+}
+
+.order-confirmation-modal::-webkit-scrollbar {
+    display: none;
 }
 
 .overlay {
