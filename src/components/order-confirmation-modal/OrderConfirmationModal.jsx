@@ -1,6 +1,7 @@
 import ReactDom from 'react-dom'
 import OrderConfirmationModalHeader from '../order-confirmation-modal-header/OrderConfirmationModalHeader'
 import ShoppingCartItemsContainer from '../shopping-cart-items-container/ShoppingCartItemsContainer'
+import StartNewOrderButton from '../start-new-order-button/StartNewOrderButton'
 import './order-confirmation-modal.css'
 
 export default function OrderConfirmationModal({ open, onClose }) {
@@ -13,7 +14,7 @@ export default function OrderConfirmationModal({ open, onClose }) {
         <OrderConfirmationModalHeader />
         <ShoppingCartItemsContainer context='order-confirmation' />
         <footer>
-          <button onClick={onClose}>Close modal</button>
+          <StartNewOrderButton onClick={onClose} />
         </footer>
       </article>
     </>,

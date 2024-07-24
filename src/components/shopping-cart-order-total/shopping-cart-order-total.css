@@ -1,6 +1,13 @@
 .shopping-cart-order-total {
-    margin-top: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.shopping-cart .shopping-cart-order-total {
+    margin-top: 16px;
+}
+
+.order-confirmation .shopping-cart-order-total {
+    margin-top: 24px;
 }

@@ -13,12 +13,15 @@ const ShoppingCartProvider = ({ children }) => {
     const [totalOrderPrice, setTotalOrderPrice] = useState(0)
 
     // Initialize shoppingCartItems
-    useEffect(() => {
-        data.map((item) => {
-            setShoppingCartItems((prevItems) => {
-                return { ...prevItems, [item.name]: 0 }
-            })
+
+    const initializeShoppingCart = () => data.map((item) => {
+        setShoppingCartItems((prevItems) => {
+            return { ...prevItems, [item.name]: 0 }
         })
+    })
+
+    useEffect(() => {
+        initializeShoppingCart()
     }, [])
 
     // Update shoppingCartItems
@@ -61,7 +64,7 @@ const ShoppingCartProvider = ({ children }) => {
     }, [totalItemPrices])
 
     return (
-        <ShoppingCartContext.Provider value={{ shoppingCartItems, updateShoppingCart, amountOfItemsInShoppingCart, singleItemPrices, setSingleItemPrices, totalItemPrices, setTotalItemPrices, totalOrderPrice }} >
+        <ShoppingCartContext.Provider value={{ initializeShoppingCart, shoppingCartItems, updateShoppingCart, amountOfItemsInShoppingCart, singleItemPrices, setSingleItemPrices, totalItemPrices, setTotalItemPrices, totalOrderPrice }} >
             {children}
         </ShoppingCartContext.Provider>
     )

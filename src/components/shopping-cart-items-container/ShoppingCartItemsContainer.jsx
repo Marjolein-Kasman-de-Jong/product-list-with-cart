@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from 'react'
 import { ShoppingCartContext } from '../../context/ShoppingCartContext'
 import ShoppingCartItem from '../shopping-cart-item/ShoppingCartItem'
+import ShoppingCartOrderTotal from '../shopping-cart-order-total/ShoppingCartOrderTotal'
 import findProductsToShow from '../../helpers/findProductsToShow'
 import './shopping-cart-items-container.css'
 
@@ -26,6 +27,7 @@ export default function ShoppingCartItemsContainer({ context }) {
                     />
                 })
             }
+            <ShoppingCartOrderTotal />
         </div>
     )
 }
