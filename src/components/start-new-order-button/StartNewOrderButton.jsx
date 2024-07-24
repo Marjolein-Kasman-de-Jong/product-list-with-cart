@@ -3,12 +3,18 @@ import { ShoppingCartContext } from '../../context/ShoppingCartContext'
 
 import './start-new-order-button.css'
 
-export default function StartNewOrderButton({ onClick }) {
+export default function StartNewOrderButton({ onClick, buttonIsSelected, setButtonIsSelected }) {
     const { initializeShoppingCart } = useContext(ShoppingCartContext)
 
     function handleClick() {
         initializeShoppingCart()
         onClick()
+
+        for (let key in buttonIsSelected) {
+            if (buttonIsSelected.hasOwnProperty(key)) {
+                buttonIsSelected[key] = false;
+            }
+        }
     }
 
     return (

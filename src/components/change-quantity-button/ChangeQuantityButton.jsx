@@ -8,14 +8,14 @@ export default function ChangeQuantityButton({ type, name, buttonIsSelected, set
     function changeQuantity(name) {
         const change = type === 'increment' ? 1 : -1
         
-        if (change === -1 && shoppingCartItems[name] === 0) {
+        if (change === -1 && shoppingCartItems[name] === 1) {
                 setButtonIsSelected(prevState => ({
                     ...prevState,
                     [name]: false
                 }))
-        } else {
-            updateShoppingCart(name, shoppingCartItems[name] + change)
-        }
+        } 
+
+        updateShoppingCart(name, shoppingCartItems[name] + change)
     }
 
     return (

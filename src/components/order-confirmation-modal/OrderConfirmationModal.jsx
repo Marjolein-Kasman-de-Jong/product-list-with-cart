@@ -4,7 +4,7 @@ import ShoppingCartItemsContainer from '../shopping-cart-items-container/Shoppin
 import StartNewOrderButton from '../start-new-order-button/StartNewOrderButton'
 import './order-confirmation-modal.css'
 
-export default function OrderConfirmationModal({ open, onClose }) {
+export default function OrderConfirmationModal({ open, onClose, buttonIsSelected, setButtonIsSelected }) {
   if (!open) return null
 
   return ReactDom.createPortal(
@@ -14,7 +14,7 @@ export default function OrderConfirmationModal({ open, onClose }) {
         <OrderConfirmationModalHeader />
         <ShoppingCartItemsContainer context='order-confirmation' />
         <footer>
-          <StartNewOrderButton onClick={onClose} />
+          <StartNewOrderButton onClick={onClose} buttonIsSelected={buttonIsSelected} setButtonIsSelected={setButtonIsSelected} />
         </footer>
       </article>
     </>,

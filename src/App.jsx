@@ -26,6 +26,8 @@ function App() {
       <OrderConfirmationModal
         open={isOpen}
         onClose={() => setIsOpen(false)}
+        buttonIsSelected={buttonIsSelected}
+        setButtonIsSelected={setButtonIsSelected}
       />
     </div>
   )

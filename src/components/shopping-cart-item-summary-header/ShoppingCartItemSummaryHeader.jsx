@@ -1,4 +1,3 @@
-// Styles
 import './shopping-cart-item-summary-header.css'
 
 export default function ShoppingCartItemSummaryHeader({ item }) {
