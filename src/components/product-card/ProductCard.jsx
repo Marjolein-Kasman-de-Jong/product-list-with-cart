@@ -18,15 +18,15 @@ export default function ProductCard({ product }) {
                     <picture>
                         <source
                             media='(min-width: 1440px )'
-                            srcSet={`https://marjolein-kasman-de-jong.github.io/product-list-with-cart/src/${image.desktop}`}
+                            srcSet={`/src/${image.desktop}`}
                         />
                         <source
                             media='(min-width: 768px)'
-                            srcSet={`./src/${image.tablet}`}
+                            srcSet={`/src/${image.tablet}`}
                         />
                         <img
                             className='product-image'
-                            src={`./src/${image.mobile}`}
+                            src={`/src/${image.mobile}`}
                             alt={name}
                         />
                     </picture>
