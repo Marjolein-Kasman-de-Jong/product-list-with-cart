@@ -1,4 +1,12 @@
-/* Product card */
+/* --- 
+Product Card Styles
+1. Product card
+2. Header
+3. Product image
+4. Product description
+--- */
+
+/* 1. Product card */
 
 .product-card {
     width: 100%;
@@ -19,7 +27,7 @@
     }
 }
 
-/* Header */
+/* 2. Header */
 
 .product-card header {
     display: flex;
@@ -27,8 +35,27 @@
     gap: 38px;
 }
 
-/* Image wrapper */
-
-.product-card header .image-wrapper {
+.product-card header .wrapper {
     position: relative;
+}
+
+/* 3. Product image */
+
+.product-card .product-image {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    transition: transform .3s;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+/* 4. Product description */
+
+.product-card .product-description {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }

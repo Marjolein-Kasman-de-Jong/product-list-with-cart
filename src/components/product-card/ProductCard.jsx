@@ -1,21 +1,54 @@
-import ProductCardImage from '../product-card-image/ProductCardImage'
+// Components
 import AddToCartButton from '../add-to-cart-button/AddToCartButton'
-import ProductCardDescription from '../product-card-description/ProductCardDescription'
-import ProductCardPrice from '../product-card-price/ProductCardPrice'
 
+// Helpers
+import convertToCurrency from '../../helpers/convertToCurrency'
+
+// Styles
 import './product-card.css'
 
 export default function ProductCard({ product }) {
+    const { category, name, price, image } = product
+
     return (
         <article className='product-card'>
             <header>
-                <div className="image-wrapper">
-                    <ProductCardImage product={product} />
+                <div className="wrapper">
+                    {/* Product image */}
+                    <picture>
+                        <source
+                            media='(min-width: 1440px )'
+                            srcSet={`src/${image.desktop}`}
+                        />
+                        <source
+                            media='(min-width: 768px)'
+                            srcSet={`src/${image.tablet}`}
+                        />
+                        <img
+                            className='product-image'
+                            src={`src/${image.mobile}`}
+                            alt={name}
+                        />
+                    </picture>
+                    {/* Add to cart button */}
                     <AddToCartButton product={product} />
                 </div>
-                <ProductCardDescription product={product} />
+                {/* Product description */}
+                <hgroup className='product-description'>
+                    {/* Category */}
+                    <p className='paragraph-1'>
+                        {category}
+                    </p>
+                    {/* Title */}
+                    <h2 className='heading-3'>
+                        {name}
+                    </h2>
+                </hgroup>
             </header>
-            <ProductCardPrice product={product} />
+            {/* Product price */}
+            <p className='paragraph-2'>
+                {convertToCurrency(price)}
+            </p>
         </article>
     )
 }

@@ -159,6 +159,10 @@ html {
 
 /* --Buttons */
 
+button:hover {
+  cursor: pointer;
+}
+
 .button-1 {
   /* ----Add to cart (regular) */
   font-size: 0.875rem;

@@ -1,8 +1,10 @@
+// Styles
 import './add-to-cart-button-not-selected.css'
 
 export default function AddToCartButtonNotSelected() {
     return (
         <div className='add-to-cart-button-not-selected'>
+            {/* Image */}
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="21"
@@ -30,6 +32,7 @@ export default function AddToCartButtonNotSelected() {
                     </clipPath>
                 </defs>
             </svg>
+            {/* Text */}
             <p>
                 Add to cart
             </p>
