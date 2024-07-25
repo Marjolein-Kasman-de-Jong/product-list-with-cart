@@ -13,8 +13,9 @@ Add To Cart Button Styles
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--rose-400);
+    border: 1px solid;
+    border-color: var(--rose-400);
     border-radius: 999px;
     background-color: var(--white);
-    transition: background-color .5s;
+    transition: border-color .5s, background-color .5s;
 }

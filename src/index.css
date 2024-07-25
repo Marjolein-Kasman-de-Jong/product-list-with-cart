@@ -187,6 +187,10 @@ button:hover {
   transition: color .5s;
 }
 
+.button-1.not-selected:hover {
+  color: var(--red);
+}
+
 .button-1.selected {
   /* ----Add to cart (selected) */
   color: var(--white);
