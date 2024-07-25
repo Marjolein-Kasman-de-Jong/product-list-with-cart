@@ -9,6 +9,9 @@ import './product-card.css'
 
 export default function ProductCard({ product }) {
     const { category, name, price, image } = product
+    const desktopImagePath = `./src/${image.desktop}`
+    const tabletImagePath = `./src/${image.tablet}`
+    const mobileImagePath = `./src/${image.mobile}`
 
     return (
         <article className='product-card'>
@@ -18,15 +21,15 @@ export default function ProductCard({ product }) {
                     <picture>
                         <source
                             media='(min-width: 1440px )'
-                            srcSet={`/src/${image.desktop}`}
+                            srcSet={desktopImagePath}
                         />
                         <source
                             media='(min-width: 768px)'
-                            srcSet={`/src/${image.tablet}`}
+                            srcSet={tabletImagePath}
                         />
                         <img
                             className='product-image'
-                            src={`/src/${image.mobile}`}
+                            src={mobileImagePath}
                             alt={name}
                         />
                     </picture>
