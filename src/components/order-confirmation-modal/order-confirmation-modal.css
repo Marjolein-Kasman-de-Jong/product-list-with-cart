@@ -1,3 +1,30 @@
+/* --- 
+Order Confirmation Modal Styles
+1. Overlay
+2. Order confirmation modal
+3. Header
+4. Header text
+5. Scrollbar
+--- */
+
+/* 1. Overlay */
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    background: rgba(0, 0, 0, 0.50);
+}
+
+/* 2. Order confirmation modal */
+
 .order-confirmation-modal {
     width: 100%;
     max-height: 95%;
@@ -25,20 +52,24 @@
     }
 }
 
-.order-confirmation-modal::-webkit-scrollbar {
-    display: none;
+/* 3. Header */
+
+.order-confirmation-modal-header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
-.overlay {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+/* 4. Header text */
+
+.order-confirmation-modal-header hgroup {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-y: hidden;
-    background: rgba(0, 0, 0, 0.50);
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* 5. Scrollbar */
+
+.order-confirmation-modal::-webkit-scrollbar {
+    display: none;
 }

@@ -3,6 +3,7 @@ import './shopping-cart-is-empty-message.css'
 export default function ShoppingCartIsEmptyMessage() {
     return (
         <article className='shopping-cart-is-empty-message paragraph-11'>
+            {/* Image */}
             <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 width="128" 
@@ -58,6 +59,7 @@ export default function ShoppingCartIsEmptyMessage() {
                     d="M9.796 52.06c-.667 5.866 16.24 12.586 37.733 15.04 14.774 1.68 27.867.906 34.854-1.654"
                 />
             </svg>
+            {/* Text */}
             <p>
                 Your added items will appear here
             </p>
