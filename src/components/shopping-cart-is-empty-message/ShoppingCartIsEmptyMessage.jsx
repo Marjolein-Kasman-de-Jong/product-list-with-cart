@@ -2,7 +2,7 @@ import './shopping-cart-is-empty-message.css'
 
 export default function ShoppingCartIsEmptyMessage() {
     return (
-        <article className='cart-is-empty-message paragraph-11'>
+        <article className='shopping-cart-is-empty-message paragraph-11'>
             <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 width="128" 
