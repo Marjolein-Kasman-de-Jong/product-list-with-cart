@@ -21,4 +21,4 @@ Users should be able to:
 
 ## Libraries
 
-* React
+* React.
