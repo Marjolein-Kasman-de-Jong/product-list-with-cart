@@ -5,7 +5,6 @@ export const AddToCartButtonContext = createContext()
 
 const AddToCartButtonProvider = ({ children }) => {
     const [isActive, setIsActive] = useState({})
-    console.log(isActive)
 
     // Initialize shoppingCartItems
 
