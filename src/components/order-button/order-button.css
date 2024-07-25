@@ -1,3 +1,12 @@
+/* --- 
+Order Button Styles
+1. Order button
+2. Order button in shopping cart
+3. Order button in order confirmation modal
+--- */
+
+/* Order button */
+
 .order-button {
     position: relative;
     width: 100%;
@@ -14,7 +23,6 @@
 }
 
 .order-button::after {
-    /* content: 'test'; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,14 +37,18 @@
     border-radius: 999px;
 }
 
+.order-button:hover::after {
+    opacity: 1;
+}
+
+/* 2. Order button in shopping cart */
+
 .cart.order-button::after {
     content: 'Confirm Order';
 }
 
+/* 3. Order button in order confirmation modal */
+
 .order-confirmation.order-button::after {
     content: 'Start New Order';
-}
-
-.order-button:hover::after {
-    opacity: 1;
 }
