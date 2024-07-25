@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import ProductList from './components/product-list/ProductList'
+import ProductOverview from './components/product-overview/ProductOverview'
 import ShoppingCart from './components/shopping-cart/ShoppingCart'
 import OrderConfirmationModal from './components/order-confirmation-modal/OrderConfirmationModal'
 import './App.css'
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className='page-wrapper'>
-      <ProductList />
+      <ProductOverview />
       <ShoppingCart setIsOpen={setIsOpen} />
       <OrderConfirmationModal
         open={isOpen}
