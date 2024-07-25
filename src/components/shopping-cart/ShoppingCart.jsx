@@ -6,7 +6,6 @@ import { ShoppingCartContext } from '../../context/ShoppingCartContext'
 // Components
 import ShoppingCartIsEmptyMessage from '../shopping-cart-is-empty-message/ShoppingCartIsEmptyMessage'
 import OrderOverview from '../order-overview/OrderOverview'
-// import ConfirmOrderButton from '../confirm-order-button/ConfirmOrderButton'
 import OrderButton from '../order-button/OrderButton'
 
 // Helpers

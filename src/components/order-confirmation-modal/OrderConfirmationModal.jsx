@@ -2,7 +2,6 @@ import ReactDom from 'react-dom'
 
 // Components
 import OrderOverview from '../order-overview/OrderOverview'
-// import StartNewOrderButton from '../start-new-order-button/StartNewOrderButton'
 import OrderButton from '../order-button/OrderButton'
 
 // Styles

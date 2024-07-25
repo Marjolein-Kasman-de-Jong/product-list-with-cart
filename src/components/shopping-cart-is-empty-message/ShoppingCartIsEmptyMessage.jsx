@@ -1,3 +1,4 @@
+// Styles
 import './shopping-cart-is-empty-message.css'
 
 export default function ShoppingCartIsEmptyMessage() {
