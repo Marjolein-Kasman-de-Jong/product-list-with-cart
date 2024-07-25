@@ -1,7 +1,17 @@
+/* --- 
+Add To Cart Button (Selected) Styles
+1. Add to cart button (selected)
+2. Add to cart button (selected) content
+--- */
+
+/* 1. Add to cart button (selected) */
+
 .add-to-cart-button.selected {
     border: none;
     background-color: var(--red);
 }
+
+/* 2. Add to cart button (selected) content */
 
 .add-to-cart-button-selected {
     width: 136px;

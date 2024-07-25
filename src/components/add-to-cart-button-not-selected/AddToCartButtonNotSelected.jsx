@@ -4,7 +4,7 @@ import './add-to-cart-button-not-selected.css'
 export default function AddToCartButtonNotSelected() {
     return (
         <div className='add-to-cart-button-not-selected'>
-            {/* Image */}
+            {/* Shopping cart icon */}
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="21"

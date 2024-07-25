@@ -1,4 +1,11 @@
-.add-to-cart-button-selected .change-quantity-button {
+/* --- 
+Change Quantity Button Styles
+1. Change quantity button
+--- */
+
+/* 1. Change quantity button */
+
+.change-quantity-button {
     width: 20px;
     height: 20px;
     padding: 4px;
