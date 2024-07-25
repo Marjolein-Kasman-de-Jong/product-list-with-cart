@@ -1,4 +1,4 @@
-.confirm-order-button {
+.order-button {
     position: relative;
     width: 100%;
     height: 53px;
@@ -13,8 +13,8 @@
     overflow: hidden;
 }
 
-.confirm-order-button::after {
-    content: 'Confirm Order';
+.order-button::after {
+    /* content: 'test'; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,6 +29,14 @@
     border-radius: 999px;
 }
 
-.confirm-order-button:hover::after {
+.cart.order-button::after {
+    content: 'Confirm Order';
+}
+
+.order-confirmation.order-button::after {
+    content: 'Start New Order';
+}
+
+.order-button:hover::after {
     opacity: 1;
 }

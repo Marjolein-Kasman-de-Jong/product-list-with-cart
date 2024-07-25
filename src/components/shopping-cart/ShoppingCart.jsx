@@ -6,7 +6,8 @@ import { ShoppingCartContext } from '../../context/ShoppingCartContext'
 // Components
 import ShoppingCartIsEmptyMessage from '../shopping-cart-is-empty-message/ShoppingCartIsEmptyMessage'
 import OrderOverview from '../order-overview/OrderOverview'
-import ConfirmOrderButton from '../confirm-order-button/ConfirmOrderButton'
+// import ConfirmOrderButton from '../confirm-order-button/ConfirmOrderButton'
+import OrderButton from '../order-button/OrderButton'
 
 // Helpers
 import checkIfShoppingCartIsEmpty from '../../helpers/checkIfShoppingCartIsEmpty'
@@ -60,7 +61,7 @@ export default function ShoppingCart({ setIsOpen }) {
                 </p>
               </div>
               {/* Confirm order button */}
-              <ConfirmOrderButton setIsOpen={setIsOpen} />
+              <OrderButton context='cart' setIsOpen={setIsOpen} />
             </footer>
           </>
       }

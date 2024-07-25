@@ -1,6 +1,11 @@
 import ReactDom from 'react-dom'
+
+// Components
 import OrderOverview from '../order-overview/OrderOverview'
-import StartNewOrderButton from '../start-new-order-button/StartNewOrderButton'
+// import StartNewOrderButton from '../start-new-order-button/StartNewOrderButton'
+import OrderButton from '../order-button/OrderButton'
+
+// Styles
 import './order-confirmation-modal.css'
 
 export default function OrderConfirmationModal({ open, onClose }) {
@@ -45,7 +50,7 @@ export default function OrderConfirmationModal({ open, onClose }) {
         <OrderOverview context='order-confirmation' />
         <footer>
           {/* Start new order button */}
-          <StartNewOrderButton onClick={onClose} />
+          <OrderButton onClick={onClose} context='order-confirmation' />
         </footer>
       </article>
     </>,
