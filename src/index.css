@@ -1,4 +1,15 @@
-/* CSS reset */
+/* ---
+General Styles
+1. CSS reset
+2. Colors
+3. Background
+4. Typography
+5. --Headings
+6. --Paragraphs
+7. --Buttons
+--- */
+
+/* 1. CSS reset */
 
 * {
   margin: 0;
@@ -10,7 +21,7 @@ button {
   font-family: inherit;
 }
 
-/* Colors */
+/* 2. Colors */
 
 :root {
   --red: rgb(199, 59, 15);
@@ -25,13 +36,13 @@ button {
   --white: rgb(255, 255, 255);
 }
 
-/* Background */
+/* 3. Background */
 
 :root {
   background-color: var(--rose-50);
 }
 
-/* Typography */
+/* 4. Typography */
 
 html {
   font-family: 'Red Hat Text', sans-serif;
@@ -39,7 +50,7 @@ html {
   font-style: normal;
 }
 
-/* --Headings */
+/* 5. --Headings */
 
 .heading-1 {
   /* ----Page title, order confirmation modal title */
@@ -73,7 +84,7 @@ html {
   line-height: normal;
 }
 
-/* --Paragraphs */
+/* 6. --Paragraphs */
 
 [class^="paragraph"] {
   line-height: normal;
@@ -157,7 +168,7 @@ html {
   font-weight: 600;
 }
 
-/* --Buttons */
+/* 7. --Buttons */
 
 button:hover {
   cursor: pointer;
