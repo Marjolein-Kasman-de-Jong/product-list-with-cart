@@ -20,6 +20,7 @@ export default function OrderConfirmationModal({ open, onClose }) {
         <header className='order-confirmation-modal-header'>
           {/* Header image */}
           <svg
+            className="checkmark"
             width="48"
             height="48"
             viewBox="0 0 48 48"

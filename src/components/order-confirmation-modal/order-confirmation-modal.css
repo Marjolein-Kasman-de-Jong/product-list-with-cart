@@ -3,8 +3,9 @@ Order Confirmation Modal Styles
 1. Overlay
 2. Order confirmation modal
 3. Header
-4. Header text
-5. Scrollbar
+4. Checkmark image
+5. Header text
+6. Scrollbar
 --- */
 
 /* 1. Overlay */
@@ -60,7 +61,37 @@ Order Confirmation Modal Styles
     gap: 24px;
 }
 
-/* 4. Header text */
+/* 4. Checkmark image */
+
+.checkmark {
+    animation-name: grow-and-shrink;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+@keyframes grow-and-shrink {
+    0% {
+        scale: 1;
+    }
+
+    25% {
+        scale: .75;
+    }
+
+    50% {
+        scale: 1.5;
+    }
+
+    75% {
+        scale: .75;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+/* 5. Header text */
 
 .order-confirmation-modal-header hgroup {
     display: flex;
@@ -68,8 +99,10 @@ Order Confirmation Modal Styles
     gap: 8px;
 }
 
-/* 5. Scrollbar */
+/* 6. Scrollbar */
 
 .order-confirmation-modal::-webkit-scrollbar {
     display: none;
 }
+
+
