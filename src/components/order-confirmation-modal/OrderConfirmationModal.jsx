@@ -1,6 +1,6 @@
 import ReactDom from 'react-dom'
 import OrderConfirmationModalHeader from '../order-confirmation-modal-header/OrderConfirmationModalHeader'
-import ShoppingCartItemsContainer from '../order-overview/OrderOverview'
+import OrderOverview from '../order-overview/OrderOverview'
 import StartNewOrderButton from '../start-new-order-button/StartNewOrderButton'
 import './order-confirmation-modal.css'
 
@@ -12,7 +12,7 @@ export default function OrderConfirmationModal({ open, onClose }) {
       <div className='overlay'></div>
       <article className='order-confirmation-modal'>
         <OrderConfirmationModalHeader />
-        <ShoppingCartItemsContainer context='order-confirmation' />
+        <OrderOverview context='order-confirmation' />
         <footer>
           <StartNewOrderButton onClick={onClose} />
         </footer>

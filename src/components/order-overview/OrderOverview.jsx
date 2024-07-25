@@ -13,7 +13,7 @@ import convertToCurrency from '../../helpers/convertToCurrency'
 // Styles
 import './order-overview.css'
 
-export default function ShoppingCartItemsContainer({ context }) {
+export default function OrderOverview({ context }) {
     const { shoppingCartItems, totalOrderPrice } = useContext(ShoppingCartContext)
     const [productsToShow, setProductsToShow] = useState([])
 
