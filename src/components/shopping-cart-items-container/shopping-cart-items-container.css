@@ -1,11 +1,27 @@
-.shopping-cart .shopping-cart-items-container {
+.shopping-cart .shopping-cart-overview {
     width: 100%;
     padding: 0;
 }
 
-.order-confirmation.shopping-cart-items-container {
+.order-confirmation-modal .shopping-cart-overview {
     margin-top: 32px;
     padding: 8px 24px 24px 24px;
     border-radius: 8px;
     background-color: var(--rose-50);
+}
+
+
+
+.shopping-cart-order-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shopping-cart .shopping-cart-order-total {
+    margin-top: 16px;
+}
+
+.order-confirmation-modal .shopping-cart-order-total {
+    margin-top: 24px;
 }

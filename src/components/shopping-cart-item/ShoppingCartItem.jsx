@@ -14,14 +14,19 @@ import data from '../../../data.json'
 // Styles
 import './shopping-cart-item.css'
 
-export default function ShoppingCartItem({ context, item, amount, singleItemPrice, totalItemPrice }) {
-    const { updateShoppingCart } = useContext(ShoppingCartContext)
+export default function ShoppingCartItem({ context, product }) {
+    const { singleItemPrices, totalItemPrices, updateShoppingCart } = useContext(ShoppingCartContext)
     const { updateIsActive } = useContext(AddToCartButtonContext)
-
+    
+    const [productName, amount] = product
+    
+    const singleItemPrice = singleItemPrices[productName]
+    const totalItemPrice = totalItemPrices[productName]
+    
     // Handle remove item from shopping cart button click
     function handleClick() {
-        updateShoppingCart(item, 0)
-        updateIsActive(item, false)
+        updateShoppingCart(productName, 0)
+        updateIsActive(productName, false)
     }
 
     return (
@@ -30,7 +35,7 @@ export default function ShoppingCartItem({ context, item, amount, singleItemPric
             {
                 context === 'order-confirmation' && 
                     <img 
-                        src={getThumbnailByName(data, item)} 
+                        src={getThumbnailByName(data, productName)} 
                         alt={item} 
                     />
             }
@@ -39,7 +44,7 @@ export default function ShoppingCartItem({ context, item, amount, singleItemPric
                 {/* Product title */}
                 <header>
                     <h3 className='heading-4'>
-                        {item}
+                        {productName}
                     </h3>
                 </header>
                 {/* Price calculation */}

@@ -1,33 +1,50 @@
 import { useState, useEffect, useContext } from 'react'
+
+// Context
 import { ShoppingCartContext } from '../../context/ShoppingCartContext'
+
+// Components
 import ShoppingCartItem from '../shopping-cart-item/ShoppingCartItem'
-import ShoppingCartOrderTotal from '../shopping-cart-order-total/ShoppingCartOrderTotal'
+
+// Helpers
 import findProductsToShow from '../../helpers/findProductsToShow'
+import convertToCurrency from '../../helpers/convertToCurrency'
+
+// Styles
 import './shopping-cart-items-container.css'
 
 export default function ShoppingCartItemsContainer({ context }) {
-    const { shoppingCartItems, singleItemPrices, totalItemPrices } = useContext(ShoppingCartContext)
+    const { shoppingCartItems, totalOrderPrice } = useContext(ShoppingCartContext)
     const [productsToShow, setProductsToShow] = useState([])
 
+    // Get shopping cart contents
     useEffect(() => {
         setProductsToShow(findProductsToShow(shoppingCartItems))
     }, [shoppingCartItems])
 
     return (
-        <div className={`${context} shopping-cart-items-container`}>
-            {
-                productsToShow.map((product) => {
-                    return <ShoppingCartItem
-                        key={product[0]}
-                        context={context}
-                        item={product[0]}
-                        amount={product[1]}
-                        singleItemPrice={singleItemPrices[product[0]]}
-                        totalItemPrice={totalItemPrices[product[0]]}
-                    />
-                })
-            }
-            <ShoppingCartOrderTotal />
-        </div>
+        <section className='shopping-cart-overview'>
+            {/* Items in shopping cart */}
+            <div>
+                {
+                    productsToShow.map((product) => {
+                        return <ShoppingCartItem
+                            key={product[0]}
+                            context={context}
+                            product={product}
+                        />
+                    })
+                }
+            </div>
+            {/* Order total */}
+            <div className="shopping-cart-order-total">
+                <p className='paragraph-6'>
+                    Order Total
+                </p>
+                <p className='paragraph-7'>
+                    {convertToCurrency(totalOrderPrice)}
+                </p>
+            </div>
+        </section>
     )
 }

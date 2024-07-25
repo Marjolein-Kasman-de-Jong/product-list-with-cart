@@ -12,6 +12,7 @@ Shopping Cart Item Styles
 /* 1. Shopping cart item */
 
 .shopping-cart-item {
+    width: 100%;
     padding: 16px 0 24px 0;
     display: flex;
     justify-content: space-between;
@@ -28,7 +29,7 @@ Shopping Cart Item Styles
 
 /* 3. Item thumbnail */
 
-.order-confirmation .shopping-cart-item img {
+.order-confirmation-modal .shopping-cart-item img {
     margin-right: 16px;
     border-radius: 4px;
 }
@@ -43,7 +44,7 @@ Shopping Cart Item Styles
 
 /* 5. Item summary in order confirmation modal */
 
-.order-confirmation .item-summary {
+.order-confirmation-modal .item-summary {
     margin-right: auto;
 }
 
