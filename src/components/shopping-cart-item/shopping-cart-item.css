@@ -60,18 +60,21 @@ Shopping Cart Item Styles
 .remove-item-button {
     width: 20px;
     height: 20px;
-    border: 1px solid var(--rose-400);
+    border: 1px solid;
+    border-color: var(--rose-400);
     border-radius: 50%;
     background-color: transparent;
+    transition: border-color .5s;
 }
 
 .remove-item-button:hover {
     cursor: pointer;
-    border: 1px solid var(--rose-900);
+    border-color: var(--rose-900);
 }
 
 .remove-item-button svg path {
     fill: var(--rose-400);
+    transition: fill .5s;
 }
 
 .remove-item-button:hover svg path {
