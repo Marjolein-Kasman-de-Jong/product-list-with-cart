@@ -9,7 +9,7 @@ import './product-card.css'
 
 export default function ProductCard({ product }) {
     const { category, name, price, image } = product
-
+    console.log(image)
     return (
         <article className='product-card'>
             <header>
