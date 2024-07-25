@@ -1,3 +1,16 @@
+/* --- 
+Shopping Cart Item Styles
+1. Shopping cart item
+2. Shopping cart item in order confirmation modal
+3. Item thumbnail
+4. Item summary
+5. Item summary in order confirmation modal
+6. Price calculation
+7. Remove item from shopping cart button
+--- */
+
+/* 1. Shopping cart item */
+
 .shopping-cart-item {
     padding: 16px 0 24px 0;
     display: flex;
@@ -6,12 +19,60 @@
     border-bottom: 1px solid var(--rose-100);
 }
 
+/* 2. Shopping cart item in order confirmation modal */
+
 .order-confirmation .shopping-cart-item {
     padding: 16px 0;
     justify-content: unset;
 }
 
+/* 3. Item thumbnail */
+
 .order-confirmation .shopping-cart-item img {
     margin-right: 16px;
     border-radius: 4px;
+}
+
+/* 4. Item summary */
+
+.item-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* 5. Item summary in order confirmation modal */
+
+.order-confirmation .item-summary {
+    margin-right: auto;
+}
+
+/* 6. Price calculation */
+
+.item-summary .price-calculation {
+    display: flex;
+    gap: 8px;
+}
+
+/* 7. Remove item from shopping cart button */
+
+.remove-item-button {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--rose-400);
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.remove-item-button:hover {
+    cursor: pointer;
+    border: 1px solid var(--rose-900);
+}
+
+.remove-item-button svg path {
+    fill: var(--rose-400);
+}
+
+.remove-item-button:hover svg path {
+    fill: var(--rose-900);
 }

@@ -1,9 +1,0 @@
-.shopping-cart-item-summary {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.order-confirmation .shopping-cart-item-summary {
-    margin-right: auto;
-}
