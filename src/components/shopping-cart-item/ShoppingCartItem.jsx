@@ -19,7 +19,7 @@ export default function ShoppingCartItem({ context, product }) {
     const { updateIsActive } = useContext(AddToCartButtonContext)
     
     const [productName, amount] = product
-    
+
     const singleItemPrice = singleItemPrices[productName]
     const totalItemPrice = totalItemPrices[productName]
     
@@ -36,7 +36,7 @@ export default function ShoppingCartItem({ context, product }) {
                 context === 'order-confirmation' && 
                     <img 
                         src={getThumbnailByName(data, productName)} 
-                        alt={item} 
+                        alt={productName} 
                     />
             }
             {/* Item summary */}

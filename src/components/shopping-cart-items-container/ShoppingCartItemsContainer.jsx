@@ -23,7 +23,7 @@ export default function ShoppingCartItemsContainer({ context }) {
     }, [shoppingCartItems])
 
     return (
-        <section className='shopping-cart-overview'>
+        <section className='order-overview'>
             {/* Items in shopping cart */}
             <div>
                 {

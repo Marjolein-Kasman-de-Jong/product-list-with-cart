@@ -1,16 +1,29 @@
-.shopping-cart .shopping-cart-overview {
+/* --- 
+Order Overview Styles
+1. Shopping cart overview in shopping cart component
+2. Shopping cart overview in order conformation modal
+3. Order total
+4. Order total in shopping cart component
+5. Order total in order confirmation modal
+--- */
+
+/* 1. Shopping cart overview in shopping cart component */
+
+.shopping-cart .order-overview {
     width: 100%;
     padding: 0;
 }
 
-.order-confirmation-modal .shopping-cart-overview {
+/* 2. Shopping cart overview in order conformation modal */
+
+.order-confirmation-modal .order-overview {
     margin-top: 32px;
     padding: 8px 24px 24px 24px;
     border-radius: 8px;
     background-color: var(--rose-50);
 }
 
-
+/* 3. Order total */
 
 .shopping-cart-order-total {
     display: flex;
@@ -18,9 +31,13 @@
     align-items: center;
 }
 
+/* 4. Order total in shopping cart component */
+
 .shopping-cart .shopping-cart-order-total {
     margin-top: 16px;
 }
+
+/* 5. Order total in order confirmation modal */
 
 .order-confirmation-modal .shopping-cart-order-total {
     margin-top: 24px;
