@@ -1,3 +1,11 @@
+/* --- 
+Product Overview Styles
+1. Product overview
+2. Product cards container
+--- */
+
+/* 1. Product overview */
+
 .product-overview {
     width: 100%;
     max-width: 500px;
@@ -13,6 +21,8 @@
         margin: unset;
     }
 }
+
+/* 2. Product cards container */
 
 .product-card-container {
     display: flex;

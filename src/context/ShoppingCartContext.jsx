@@ -13,16 +13,11 @@ const ShoppingCartProvider = ({ children }) => {
     const [totalOrderPrice, setTotalOrderPrice] = useState(0)
 
     // Initialize shoppingCartItems
-
     const initializeShoppingCart = () => data.map((item) => {
         setShoppingCartItems((prevItems) => {
             return { ...prevItems, [item.name]: 0 }
         })
     })
-
-    useEffect(() => {
-        initializeShoppingCart()
-    }, [])
 
     // Update shoppingCartItems
     const updateShoppingCart = (item, amount) => {
@@ -32,35 +27,49 @@ const ShoppingCartProvider = ({ children }) => {
     }
 
     // Monitor amount of items in shopping cart
-    useEffect(() => {
+    const monitorAmountOfItemsInShoppingCart = () => {
         setAmountOfItemsInShoppingCart((prevItems) => {
             return Object.values(shoppingCartItems).reduce((accumulator, currentValue) => accumulator + currentValue, 0)
         })
-    }, [shoppingCartItems])
+    }
 
-    // Initialize singleItemPrices
-    useEffect(() => {
+    // Initialize single item prices
+    const initializeSingleItemPrices = () => {
         data.map((item) => {
             setSingleItemPrices((prevItems) => {
                 return { ...prevItems, [item.name]: item.price }
             })
         })
-    }, [])
+    }
 
-    // Monitor totalItemPrices
-    useEffect(() => {
+    // Monitor total item prices
+    const monitorTotalItemPrices = () => {
         data.map((item) => {
             setTotalItemPrices((prevItems) => {
                 return { ...prevItems, [item.name]: shoppingCartItems[item.name] * item.price }
             })
         })
-    }, [shoppingCartItems])
+    }
 
     // Monitor total order price
-    useEffect(() => {
+    const monitorTotalOrderPrice = () => {
         setTotalOrderPrice(() => {
             return Object.values(totalItemPrices).reduce((accumulator, currentValue) => accumulator + currentValue, 0)
         })
+    }
+
+    useEffect(() => {
+        initializeShoppingCart()
+        initializeSingleItemPrices()
+    }, [])
+
+    useEffect(() => {
+        monitorAmountOfItemsInShoppingCart()
+        monitorTotalItemPrices()
+    }, [shoppingCartItems])
+
+    useEffect(() => {
+        monitorTotalOrderPrice()
     }, [totalItemPrices])
 
     return (
