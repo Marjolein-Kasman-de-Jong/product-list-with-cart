@@ -1,19 +1,18 @@
 import { useContext } from 'react'
 import { ShoppingCartContext } from '../../context/ShoppingCartContext'
+import { AddToCartButtonContext } from '../../context/AddToCartButtonContext'
 import './change-quantity-button.css'
 
-export default function ChangeQuantityButton({ type, name, buttonIsSelected, setButtonIsSelected }) {
+export default function ChangeQuantityButton({ type, name }) {
     const { shoppingCartItems, updateShoppingCart } = useContext(ShoppingCartContext)
+    const { updateIsActive } = useContext(AddToCartButtonContext)
 
-    function changeQuantity(name) {
+    function handleClick() {
         const change = type === 'increment' ? 1 : -1
         
         if (change === -1 && shoppingCartItems[name] === 1) {
-                setButtonIsSelected(prevState => ({
-                    ...prevState,
-                    [name]: false
-                }))
-        } 
+                updateIsActive(name, false)
+        }
 
         updateShoppingCart(name, shoppingCartItems[name] + change)
     }
@@ -21,7 +20,7 @@ export default function ChangeQuantityButton({ type, name, buttonIsSelected, set
     return (
         <div 
             className='change-quantity-button' 
-            onClick={() => changeQuantity(name)}
+            onClick={() => handleClick()}
         >
             <img 
                 src={`src/assets/images/icon-${type}-quantity.svg`} 

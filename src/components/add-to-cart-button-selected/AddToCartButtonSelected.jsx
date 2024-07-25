@@ -3,7 +3,7 @@ import { ShoppingCartContext } from '../../context/ShoppingCartContext'
 import ChangeQuantityButton from '../change-quantity-button/ChangeQuantityButton'
 import './add-to-cart-button-selected.css'
 
-export default function AddToCartButtonSelected({ product, buttonIsSelected, setButtonIsSelected }) {
+export default function AddToCartButtonSelected({ product }) {
     const {shoppingCartItems} = useContext(ShoppingCartContext)
     const { name } = product
 
@@ -12,8 +12,6 @@ export default function AddToCartButtonSelected({ product, buttonIsSelected, set
             <ChangeQuantityButton 
                 type='decrement' 
                 name={name}
-                buttonIsSelected={buttonIsSelected} 
-                setButtonIsSelected={setButtonIsSelected}
             />
             <p>
                 {shoppingCartItems[name] ? shoppingCartItems[name] : '0'}
@@ -21,8 +19,6 @@ export default function AddToCartButtonSelected({ product, buttonIsSelected, set
             <ChangeQuantityButton 
                 type='increment' 
                 name={name}
-                buttonIsSelected={buttonIsSelected} 
-                setButtonIsSelected={setButtonIsSelected} 
             />
         </div>
     )

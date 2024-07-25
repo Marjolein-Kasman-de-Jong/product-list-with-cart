@@ -5,7 +5,7 @@ import getThumbnailByName from '../../helpers/getThumbnailByName'
 import data from '../../../data.json'
 import './shopping-cart-item.css'
 
-export default function ShoppingCartItem({ context, item, amount, singleItemPrice, totalItemPrice, buttonIsSelected, setButtonIsSelected }) {
+export default function ShoppingCartItem({ context, item, amount, singleItemPrice, totalItemPrice }) {
     return (
         <article className='shopping-cart-item'>
             {
@@ -20,7 +20,7 @@ export default function ShoppingCartItem({ context, item, amount, singleItemPric
             />
             {
                 context === 'shopping-cart' ?
-                    <RemoveItemButton item={item} buttonIsSelected={buttonIsSelected} setButtonIsSelected={setButtonIsSelected} />
+                    <RemoveItemButton item={item} />
                     :
                     <p className='paragraph-4'>
                         {convertToCurrency(totalItemPrice)}

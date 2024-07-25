@@ -1,20 +1,17 @@
 import { useContext } from 'react'
 import { ShoppingCartContext } from '../../context/ShoppingCartContext'
+import { AddToCartButtonContext } from '../../context/AddToCartButtonContext'
 
 import './start-new-order-button.css'
 
-export default function StartNewOrderButton({ onClick, buttonIsSelected, setButtonIsSelected }) {
+export default function StartNewOrderButton({ onClick }) {
     const { initializeShoppingCart } = useContext(ShoppingCartContext)
+    const { isActive, initializeIsActive, updateIsActive } = useContext(AddToCartButtonContext)
 
     function handleClick() {
         initializeShoppingCart()
+        initializeIsActive()
         onClick()
-
-        for (let key in buttonIsSelected) {
-            if (buttonIsSelected.hasOwnProperty(key)) {
-                buttonIsSelected[key] = false;
-            }
-        }
     }
 
     return (

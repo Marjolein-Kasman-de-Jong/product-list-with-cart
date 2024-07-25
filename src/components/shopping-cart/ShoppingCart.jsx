@@ -6,7 +6,7 @@ import ShoppingCartContent from '../shopping-cart-content/ShoppingCartContent'
 import checkIfShoppingCartIsEmpty from '../../helpers/checkIfShoppingCartIsEmpty'
 import './shopping-cart.css'
 
-export default function ShoppingCart({ setIsOpen, buttonIsSelected, setButtonIsSelected }) {
+export default function ShoppingCart({ setIsOpen }) {
   const { shoppingCartItems } = useContext(ShoppingCartContext)
   const [isShoppingCartEmpty, setIsShoppingCartEmpty] = useState(true)
 
@@ -21,7 +21,7 @@ export default function ShoppingCart({ setIsOpen, buttonIsSelected, setButtonIsS
         isShoppingCartEmpty ?
           <ShoppingCartIsEmptyMessage />
           :
-          <ShoppingCartContent setIsOpen={setIsOpen} buttonIsSelected={buttonIsSelected} setButtonIsSelected={setButtonIsSelected} />
+          <ShoppingCartContent setIsOpen={setIsOpen} />
       }
     </section>
   )

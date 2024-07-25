@@ -1,18 +1,16 @@
 import { useContext } from 'react'
 import { ShoppingCartContext } from '../../context/ShoppingCartContext'
+import { AddToCartButtonContext } from '../../context/AddToCartButtonContext'
 import './remove-item-button.css'
 
-export default function RemoveItemButton({ item, buttonIsSelected, setButtonIsSelected }) {
+export default function RemoveItemButton({ item }) {
     const { updateShoppingCart } = useContext(ShoppingCartContext)
+    const { updateIsActive } = useContext(AddToCartButtonContext)
 
     function handleClick() {
         updateShoppingCart(item, 0)
-        
-        setButtonIsSelected(prevState => ({
-                ...prevState,
-                [item]: false
-            }))
-        }
+        updateIsActive(item, false)
+    }
     
     return (
         <button 

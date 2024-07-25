@@ -5,13 +5,13 @@ import ProductCardPrice from '../product-card-price/ProductCardPrice'
 
 import './product-card.css'
 
-export default function ProductCard({ product, buttonIsSelected, setButtonIsSelected }) {
+export default function ProductCard({ product }) {
     return (
         <article className='product-card'>
             <header>
                 <div className="image-wrapper">
                     <ProductCardImage product={product} />
-                    <AddToCartButton product={product} buttonIsSelected={buttonIsSelected} setButtonIsSelected={setButtonIsSelected} />
+                    <AddToCartButton product={product} />
                 </div>
                 <ProductCardDescription product={product} />
             </header>

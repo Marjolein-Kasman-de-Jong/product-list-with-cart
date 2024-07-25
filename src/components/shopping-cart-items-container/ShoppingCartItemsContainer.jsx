@@ -5,7 +5,7 @@ import ShoppingCartOrderTotal from '../shopping-cart-order-total/ShoppingCartOrd
 import findProductsToShow from '../../helpers/findProductsToShow'
 import './shopping-cart-items-container.css'
 
-export default function ShoppingCartItemsContainer({ context, buttonIsSelected, setButtonIsSelected }) {
+export default function ShoppingCartItemsContainer({ context }) {
     const { shoppingCartItems, singleItemPrices, totalItemPrices } = useContext(ShoppingCartContext)
     const [productsToShow, setProductsToShow] = useState([])
 
@@ -24,8 +24,6 @@ export default function ShoppingCartItemsContainer({ context, buttonIsSelected, 
                         amount={product[1]}
                         singleItemPrice={singleItemPrices[product[0]]}
                         totalItemPrice={totalItemPrices[product[0]]}
-                        buttonIsSelected={buttonIsSelected} 
-                        setButtonIsSelected={setButtonIsSelected}
                     />
                 })
             }
