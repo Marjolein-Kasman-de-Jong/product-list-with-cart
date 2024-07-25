@@ -11,7 +11,7 @@ import findProductsToShow from '../../helpers/findProductsToShow'
 import convertToCurrency from '../../helpers/convertToCurrency'
 
 // Styles
-import './shopping-cart-items-container.css'
+import './order-overview.css'
 
 export default function ShoppingCartItemsContainer({ context }) {
     const { shoppingCartItems, totalOrderPrice } = useContext(ShoppingCartContext)

@@ -1,4 +1,4 @@
-import ShoppingCartItemsContainer from '../shopping-cart-items-container/ShoppingCartItemsContainer'
+import ShoppingCartItemsContainer from '../order-overview/OrderOverview'
 import Usp from '../usp/Usp'
 import ConfirmOrderButton from '../confirm-order-button/ConfirmOrderButton'
 import './shopping-cart-content.css'

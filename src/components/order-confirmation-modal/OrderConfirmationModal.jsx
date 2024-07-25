@@ -1,6 +1,6 @@
 import ReactDom from 'react-dom'
 import OrderConfirmationModalHeader from '../order-confirmation-modal-header/OrderConfirmationModalHeader'
-import ShoppingCartItemsContainer from '../shopping-cart-items-container/ShoppingCartItemsContainer'
+import ShoppingCartItemsContainer from '../order-overview/OrderOverview'
 import StartNewOrderButton from '../start-new-order-button/StartNewOrderButton'
 import './order-confirmation-modal.css'
 
