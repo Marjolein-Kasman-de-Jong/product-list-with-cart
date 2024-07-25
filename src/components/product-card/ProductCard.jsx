@@ -8,8 +8,9 @@ import convertToCurrency from '../../helpers/convertToCurrency'
 import './product-card.css'
 
 export default function ProductCard({ product }) {
+    // const { category, name, price, image } = product
     const { category, name, price, image } = product
-    console.log(image)
+
     return (
         <article className='product-card'>
             <header>
@@ -18,7 +19,8 @@ export default function ProductCard({ product }) {
                     <picture>
                         <source
                             media='(min-width: 1440px )'
-                            srcSet={`src/${image.desktop}`}
+                            // srcSet={`src/${image.desktop}`}
+                            srcSet='src/assets/images/image-waffle-desktop.jpg'
                         />
                         <source
                             media='(min-width: 768px)'
