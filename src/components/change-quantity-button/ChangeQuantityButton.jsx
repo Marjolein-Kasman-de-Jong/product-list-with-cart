@@ -22,10 +22,18 @@ export default function ChangeQuantityButton({ type, name }) {
         updateShoppingCart(name, shoppingCartItems[name] + change)
     }
 
+    // Handle keydown event
+    function handleKeyDown(event) {
+        if (event.key === 'Enter') {
+            handleClick()
+        }
+    }
+
     return (
         <div 
             className='change-quantity-button' 
             onClick={() => handleClick()}
+            onKeyDown={handleKeyDown}
             tabIndex='0'
         >
             <img 
