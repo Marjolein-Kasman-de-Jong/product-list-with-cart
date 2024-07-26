@@ -21,4 +21,6 @@ Users should be able to:
 
 ## Libraries
 
-* React.
+* React
+
+![Product List with cart](https://github.com/Marjolein-Kasman-de-Jong/product-list-with-cart/blob/main/Screenshot.png)
