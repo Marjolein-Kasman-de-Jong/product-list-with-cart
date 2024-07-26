@@ -37,7 +37,7 @@ export default function ChangeQuantityButton({ type, name }) {
             tabIndex='0'
         >
             <img 
-                src={`src/assets/images/icon-${type}-quantity.svg`} 
+                src={`./images/icon-${type}-quantity.svg`} 
                 alt={type} 
             />
         </div>
