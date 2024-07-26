@@ -1,3 +1,3 @@
 export default function getImageUrl(name) {
-    return new URL(name, import.meta.url).href
+    return new URL(`/product-list-with-cart/${name}`, import.meta.url).href
 }
