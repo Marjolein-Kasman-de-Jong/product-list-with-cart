@@ -1,7 +1,7 @@
 import { useState, useEffect, createContext } from 'react'
 
 // Constants
-import data from '../../data.json'
+import data from '../constants/data'
 
 export const AddToCartButtonContext = createContext()
 

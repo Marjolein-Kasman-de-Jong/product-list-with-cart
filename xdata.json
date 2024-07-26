@@ -1,10 +1,10 @@
 [
     {
        "image": {
-            "thumbnail": "https://marjolein-kasman-de-jong.github.io/product-list-with-cart/src/assets/images/image-waffle-thumbnailjpg",
-            "mobile": "https://marjolein-kasman-de-jong.github.io/product-list-with-cart/src/assets/images/image-waffle-mobile.jpg",
-            "tablet": "https://marjolein-kasman-de-jong.github.io/product-list-with-cart/src/assets/images/image-waffle-tablet.jpg",
-            "desktop": "https://marjolein-kasman-de-jong.github.io/product-list-with-cart/src/assets/images/image-waffle-desktop.jpg"
+            "thumbnail": "assets/images/image-waffle-thumbnailjpg",
+            "mobile": "assets/images/image-waffle-mobile.jpg",
+            "tablet": "assets/images/image-waffle-tablet.jpg",
+            "desktop": "assets/images/image-waffle-desktop.jpg"
        },
        "name": "Waffle with Berries",
        "category": "Waffle",

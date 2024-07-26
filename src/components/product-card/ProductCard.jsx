@@ -3,6 +3,7 @@ import AddToCartButton from '../add-to-cart-button/AddToCartButton'
 
 // Helpers
 import convertToCurrency from '../../helpers/convertToCurrency'
+import getImageUrl from '../../helpers/getImageUrl'
 
 // Styles
 import './product-card.css'
@@ -18,7 +19,7 @@ export default function ProductCard({ product }) {
                     <picture>
                         <source
                             media='(min-width: 1440px )'
-                            srcSet={`${image.desktop}`}
+                            srcSet={getImageUrl(image.desktop)}
                         />
                         <source
                             media='(min-width: 768px)'

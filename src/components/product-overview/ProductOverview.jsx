@@ -2,7 +2,7 @@
 import ProductCard from '../product-card/ProductCard'
 
 // Constants
-import data from '../../../data.json'
+import data from '../../constants/data'
 
 // Styles
 import './product-overview.css'

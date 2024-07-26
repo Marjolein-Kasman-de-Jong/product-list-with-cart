@@ -9,7 +9,7 @@ import convertToCurrency from '../../helpers/convertToCurrency'
 import getThumbnailByName from '../../helpers/getThumbnailByName'
 
 // Constants
-import data from '../../../data.json'
+import data from '../../constants/data'
 
 // Styles
 import './shopping-cart-item.css'
