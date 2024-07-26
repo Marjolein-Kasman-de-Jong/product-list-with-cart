@@ -3,14 +3,13 @@ import AddToCartButton from '../add-to-cart-button/AddToCartButton'
 
 // Helpers
 import convertToCurrency from '../../helpers/convertToCurrency'
-import getImageUrl from '../../helpers/getImageUrl'
 
 // Styles
 import './product-card.css'
 
 export default function ProductCard({ product }) {
     const { category, name, price, image } = product
-    console.log(getImageUrl(image.desktop))
+
     return (
         <article className='product-card'>
             <header>
@@ -19,7 +18,7 @@ export default function ProductCard({ product }) {
                     <picture>
                         <source
                             media='(min-width: 1440px )'
-                            srcSet={getImageUrl(image.desktop)}
+                            srcSet={`${image.desktop}`}
                         />
                         <source
                             media='(min-width: 768px)'

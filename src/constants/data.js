@@ -4,7 +4,7 @@ const data = [
             "thumbnail": "../assets/images/image-waffle-thumbnail.jpg",
             "mobile": "../assets/images/image-waffle-mobile.jpg",
             "tablet": "../assets/images/image-waffle-tablet.jpg",
-            "desktop": "image-waffle-desktop.jpg"
+            "desktop": "./images/image-waffle-desktop.jpg"
         },
         "name": "Waffle with Berries",
         "category": "Waffle",
