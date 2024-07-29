@@ -48,8 +48,10 @@ Product Card Styles
     transition: transform .3s;
 }
 
-.product-card:hover .product-image {
-    transform: scale(1.05);
+@media screen and (min-width: 1440px) {
+    .product-card:hover .product-image {
+        transform: scale(1.05);
+    }
 }
 
 /* 4. Product description */
